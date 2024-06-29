@@ -73,8 +73,7 @@ class DouVacancyManager:
 
     def vacancy_not_relevant(self):
         not_relevant_vacancy = self.driver.find_element(
-            By.XPATH,
-            '//*[@id="container"]/div[2]/div/div[2]/div[1]/div/div[4]/div[3]',
+            By.CSS_SELECTOR, 'div[style*="background: #ffd9a1;"]'
         )
 
         if not_relevant_vacancy.text == NOT_RELEVANT_VACANCY_TEXT:
